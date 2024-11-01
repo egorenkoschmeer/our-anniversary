@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <style>
+        /* Основной стиль */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f9c2d9;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f9c2d9;
+            overflow: hidden;
+        }
+
+        .photo {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .card-text {
+            padding: 20px;
+            color: #333;
+            background-color: #f9c2d9;
+            /* Используем класс hidden для скрытия */
+        }
+
+        /* Заголовок и основной текст */
+        .card-text h2 {
+            color: #fc4655;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-top: 0;
+        }
+
+        .card-text p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Уменьшенные отступы */
+        .reduced-padding {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        /* Стили выделения */
+        .highlight {
+            font-weight: bold;
+            color: #fc4655;
+        }
+
+        /* Класс скрытия */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <!-- Первое фото с событием клика -->
+    <div class="photo" id="initial-photo" style="background-image: url('match.jpg');"></div>
+    
+    <!-- Остальные фото и текст, изначально скрытые -->
+    <div id="content" class="hidden">
+        <div class="photo" style="background-image: url('chat_1.jpeg');"></div>
+        <div class="photo" style="background-image: url('chat_2.jpeg');"></div>
+        <div class="photo" style="background-image: url('chat_3.jpeg');"></div>
+        <div class="photo" style="background-image: url('chat_4.jpeg');"></div>
+        <div class="photo" style="background-image: url('chat_5.jpeg');"></div>
+
+        <div class="card-text">
+            <h2>Lieber Albert,</h2>
+            <p>Ich bin sehr froh, dass mich damals im Jahr 2019 dein typischer Pick-up-Trick nicht aufgehalten hat – genauso wenig wie dich mein Deutsch. Ich glaube, wenn ich damals schon gewusst hätte, dass wir nur fünf Jahre später verheiratet sein würden, hätte ich mich bereits an jenem Freitag mit dir getroffen</p>
+            <p>Zusammen haben wir unsere größten Träume verwirklicht: du hast es nach Russland geschafft, und ich nach Hamburg. Ich bin mir sicher, dass noch viele besondere Momente auf uns warten, von denen wir uns viele jetzt noch gar nicht vorstellen können. Ich bin glücklich, dich an meiner Seite zu haben und jeden Tag mit dir die Welt neu zu entdecken.</p>
+            <p><strong style="color: #fc4655;"><big>Ich liebe dich!</big></strong></p>
+            <div class="photo" style="background-image: url('hochzeit.jpg');"></div>
+
+            <div class="card-text reduced-padding">
+                <p>Heute, am 2. November, dem Tag unseres one-night-stands, gehen wir in die romantischste Bar Hamburgs – den Berliner Betrüger. Es gibt noch ein paar besondere Dates, die ich dieses Jahr gerne mit dir wiederholen würde, da die Kalendertage in 2024 mit denen in 2019 übereinstimmen. Vielleicht entwickeln sich daraus noch ein paar Traditionen, wie zum Beispiel:</p>
+
+                <p><strong class="highlight">15. November – Tag der Bar „Möwe Sturzflug“:</strong> Gefeiert, indem man in die gleichnamige Bar geht und anschließend am St. Pauli-Pier einen Joint raucht.</p>
+    
+                <p><strong class="highlight">23. November – Tag der Fähre:</strong> Man muss eine Fährfahrt machen und dabei ein Bier trinken (unbedingt auf dem Oberdeck! Oder zumindest bis zum Umsteigen).</p>
+    
+                <p><strong class="highlight">10. Dezember – Tag des Kartoffelsalats:</strong> An diesem Tag versucht man, das verlorene Rezept für den Kartoffelsalat eines gecancelten Kochs wiederzufinden.</p>
+    
+                <p><strong class="highlight">20. Dezember – Kinotag:</strong> Endet gemütlich zu Hause mit deutschen Stand-up-Shows im Fernsehen.</p>
+    
+                <p>Optional, falls wir nicht nach Russland fahren: <strong class="highlight">der Elbphilharmonie-Tag am 14. Januar</strong> und <strong class="highlight">der Bergedorf–Tag am 18. Januar</strong>. Es ist klar, wie diese beiden Tage zu feiern sind.</p>
+                
+                <p>Wir können aber nicht nur immer wieder unsere old good dates wiederholen. Deswegen lade ich dich als Geschenk zu einem neuen <a href="tickets.jpg" target="_blank" style="color: #fc4655; text-decoration: underline;">Erlebnis</a> am <strong class="highlight">22. November</strong> bei unseren Nachbarn ein. Happy Anniversary, Lapusik!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Показать скрытый контент при клике на первое фото
+    document.getElementById("initial-photo").onclick = function() {
+        document.getElementById("initial-photo").classList.add("hidden");
+        document.getElementById("content").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
+
